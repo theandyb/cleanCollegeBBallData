@@ -6,7 +6,7 @@ Clean up college bball data downloaded from NCAA
 sed, python, R, and make
 
 #Instructions
-1. Get source directory
+1. Get source directory:
 	```
 	git clone https://github.com/theandyb/cleanCollegeBBallData
 	```

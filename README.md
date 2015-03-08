@@ -7,9 +7,9 @@ sed, python, R, and make
 
 #Instructions
 1. Get source directory
-	{% highlight bash %}
+	```
 	git clone https://github.com/theandyb/cleanCollegeBBallData
-	{% endhighlight %}
+	```
 2. Download data from (NCAA)[http://web1.ncaa.org/stats/StatsSrv/rankings?sportCode=MBB]
 	* Selection Division
 	* Select reporting week (I would go with through most recent week)

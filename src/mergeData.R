@@ -20,7 +20,7 @@ cols <- list(   c("Name","W","L"),
 		c("Name", "ORebs", "DRebs"))
 
 files <- c(1,4,5,6,8,9,10,11,13,14,15,17,18,21)
-fDir <- "../data/"
+fDir <- "./raw_data/"
 fName <- paste(fDir, as.character(files[1]),".csv",sep="")
 res <- data.table(read.csv(fName)[,cols[[1]]])
 setkey(res,Name)
@@ -34,4 +34,4 @@ for(i in 2:length(files)){
 	setkey(res,Name)
 	#print(res["Alcorn"])
 }
-write.csv(res,file="../data/final.csv", row.names=FALSE)
+write.csv(res,file="./data/final.csv", row.names=FALSE)

@@ -1,6 +1,6 @@
-fName = "/home/andy/Projects/bball2015/raw_data/all_stat2.csv"
+fName = "./raw_data/all_stat2.csv"
 num = 1
-outFile = "/home/andy/Projects/bball2015/data/" + str(num) + ".csv"
+outFile = "./raw_data/" + str(num) + ".csv"
 out = open(outFile,'w')
 
 with open(fName,"r") as f:
@@ -10,6 +10,6 @@ with open(fName,"r") as f:
 		else:
 			out.close()
 			num += 1
-			outFile = "/home/andy/Projects/bball2015/data/" + str(num) + ".csv"
+			outFile = "./raw_data/" + str(num) + ".csv"
 			out = open(outFile,'w')
 print("Done!")

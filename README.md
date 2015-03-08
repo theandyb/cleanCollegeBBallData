@@ -18,3 +18,5 @@ Also need the data.table library in R
 	* For statistic category, use the dropdown list for Team and select "All Statistics"
 	* Click Show Report(CSV - Spreadsheet) and save this file into the raw_data directory as all_data.csv
 3. Run make from the cleanCollegeBBallData directory
+	* By default, teams that are reclassifying are dropped. To keep these teams, run make with the option RECLASS=1, i.e.
+		* ``` make RECLASS=1 ```

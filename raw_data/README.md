@@ -1,5 +1,5 @@
 
-1. Download data from (NCAA)[http://web1.ncaa.org/stats/StatsSrv/rankings?sportCode=MBB]
+1. Download data from [NCAA](http://web1.ncaa.org/stats/StatsSrv/rankings?sportCode=MBB)
   *  Selection Division
   *  Select reporting week (I would go with through most recent week)
   *  For statistic category, use the dropdown list for Team and select "All Statistics"

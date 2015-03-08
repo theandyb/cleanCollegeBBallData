@@ -2,15 +2,14 @@
 ### To get a list of what variables are in each resulting csv file, run the script
 ### headers.py
 
+library("data.table")
+
 args <- commandArgs(TRUE)
 if(length(args)==0){
-	outFile = "./data/final.csv"
+	outFile = "data/final.csv"
 	} else {
-		outFile = as.character(args[1])
-	}
-
-
-library("data.table")
+	outFile = as.character(args[1])
+}
 
 cols <- list(   c("Name","W","L"),
 		c("Name","PTS","PPG","OPP.PTS","OPP.PPG"),

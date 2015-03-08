@@ -5,6 +5,8 @@ Clean up college bball data downloaded from NCAA
 
 sed, python, R, and make
 
+Also need the data.table library in R
+
 #Instructions
 1. Get source directory:
 	```

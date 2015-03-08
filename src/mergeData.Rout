@@ -1,0 +1,58 @@
+
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ###Note: I don't select all available variables
+> ### To get a list of what variables are in each resulting csv file, run the script
+> ### headers.py
+> 
+> args <- commandArgs(TRUE)
+> if(length(args)==0){
++ 	outFile = "./data/final.csv"
++ 	} else {
++ 		outFile = as.character(args[1])
++ 	}
+> 
+> 
+> library("data.table")
+> 
+> cols <- list(   c("Name","W","L"),
++ 		c("Name","PTS","PPG","OPP.PTS","OPP.PPG"),
++ 		c("Name", "FGM", "FGA"),
++ 		c("Name", "OPP.FG", "OPP.FGA"),
++ 		c("Name", "X3FG", "X3FGA"),
++ 		c("Name", "Opp.3FGA", "Opp.3FG"),
++ 		c("Name", "FT", "FTA"),
++ 		c("Name", "REB","RPG", "OPP.REB", "OPP.RPG", "REB.MAR"),
++ 		c("Name", "AST", "TO"),
++ 		c("Name", "BLKS", "BKPG"),
++ 		c("Name", "ST"),
++ 		c("Name", "Opp.TO"),
++ 		c("Name", "Fouls"),
++ 		c("Name", "ORebs", "DRebs"))
+> 
+> files <- c(1,4,5,6,8,9,10,11,13,14,15,17,18,21)
+> fDir <- "./raw_data/"
+> fName <- paste(fDir, as.character(files[1]),".csv",sep="")
+> res <- data.table(read.csv(fName)[,cols[[1]]])
+Error in file(file, "rt") : cannot open the connection
+Calls: data.table -> read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file './raw_data/1.csv': No such file or directory
+Execution halted

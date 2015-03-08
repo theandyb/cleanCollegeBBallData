@@ -2,6 +2,14 @@
 ### To get a list of what variables are in each resulting csv file, run the script
 ### headers.py
 
+args <- commandArgs(TRUE)
+if(length(args)==0){
+	outFile = "./data/final.csv"
+	} else {
+		outFile = as.character(args[1])
+	}
+
+
 library("data.table")
 
 cols <- list(   c("Name","W","L"),
@@ -34,4 +42,4 @@ for(i in 2:length(files)){
 	setkey(res,Name)
 	#print(res["Alcorn"])
 }
-write.csv(res,file="./data/final.csv", row.names=FALSE)
+write.csv(res,file=outFile, row.names=FALSE)
